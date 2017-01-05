@@ -10,4 +10,4 @@ PART OF: | [Research Data at the Edge](http://library.duke.edu/edge/events/rc17)
 
 ## Start with...
 
-[API-JSON-RCSymposium.Rmd](API-JSON-RCSymposium.Rmd)
+API-JSON-RCSymposium.Rmd
