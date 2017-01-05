@@ -9,7 +9,7 @@ A presentation for [Research Data at the Edge](http://library.duke.edu/edge/even
 
 ## Outline
 
-* API -- foo
+* API
 * JSON
 * R / RStudio
 
