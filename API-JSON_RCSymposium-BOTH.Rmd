@@ -32,7 +32,7 @@ Application Program Interface
 * Instructions for programs
 
 <!-- http://mobile-gps.net/2015/01/ -->
-![](http://mobile-gps.net/gps-systems-without-api/)
+![](images/api.png)
 
 
 ---    
@@ -40,7 +40,7 @@ Application Program Interface
 ### Client / Server 
 <!-- https://pixabay.com/en/client-server-networking-laptop-341420/ -->
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/500px-Client-server-model.svg.png) 
+![](images/Client-server-model.svg.png) 
 
 * Make [R] interface with the web, same as h2m but now m2m
 
@@ -50,10 +50,10 @@ Application Program Interface
 * Human version
     + Person uses Web Client
     + Person enters a URL<br>
-    ![](https://upload.wikimedia.org/wikipedia/commons/d/d6/Uniform_Resource_Locator_%28URL%29_example.PNG)
+    ![](images/URL.PNG)
     <!-- https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_(URL)_example.PNG -->
     + client & server negotiate<br> 
-    ![dramatization: good handshake](http://i.giphy.com/U2XboRuN89Idi.gif) 
+    ![dramatization: good handshake](images/good-handshake.gif) 
     + Information is sent back in wrapped HTML
     + Web Browser parses the HTML 
     <!-- https://commons.wikimedia.org/wiki/File:HTML.svg -->
@@ -64,7 +64,7 @@ Application Program Interface
 ## m2m -- development
 
 
-![dramatization: confused about the protocol](http://i.giphy.com/MjkCYjM46NrrO.gif)
+![dramatization: confused about the protocol](images/development-confusion.gif)
     
 ## JSON
 
