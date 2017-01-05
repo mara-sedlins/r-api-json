@@ -1,0 +1,110 @@
+---
+title: "Using R to orchestrate APIs"
+author: "John Little"
+date: '`r Sys.Date()`'
+output:
+  slidy_presentation: default
+  html_notebook: default
+---
+
+A presentation for [Research Data at the Edge](http://library.duke.edu/edge/events/rc17), Day One of [Duke Research Computing Symposium](https://rc.duke.edu/symposium-2017/)
+
+## Outline
+
+* API
+* JSON
+* R / RStudio
+
+But Why?
+Because...  The Web!
+<!-- NASA animated GIF ///  http://i.giphy.com/l2Jht4lIfEQfJ3zj2.gif    --> 
+<!--  good human handshake ///  http://giphy.com/gifs/thomas-U2XboRuN89Idi -->
+<!-- after the research handshake is complete /// http://giphy.com/gifs/80s-1980s-thomas-dolby-wCKmBd7oNtA4g  --> 
+
+
+<!-- the confusion of the m2m handshake ///   http://giphy.com/gifs/thomas-MjkCYjM46NrrO -->
+
+* The Web has lots of stuff
+    + A frontier beyond the carefully constructed dataset
+    + The stuff is wrapped in HTML
+    + The HTML is transported over HTTP but composed for h2m consumption
+    + Intellectual Property Rights bear serious consideration
+
+## API
+
+Aplication Program Interface 
+
+* Built for machine-to-machine interactions
+* Instructions for programs
+* Client / Server <!-- https://pixabay.com/en/client-server-networking-laptop-341420/ --> <!-- https://commons.wikimedia.org/wiki/File:Client-server-model.svg -->
+    + Instructions are the arrows  
+
+
+&nbsp; <!-- break in the unordered list -->
+
+* Make [R] interface with the web, same as h2m but now m2m
+* Human version
+    + Person uses Web Client
+    + Person enters a URL <!-- https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_(URL)_example.PNG -->
+    + client & server negotiate
+    + Information is sent back in wrapped HTML
+    + Web Browser parses the HTML <!-- https://commons.wikimedia.org/wiki/File:HTML.svg -->
+
+    
+## JSON
+
+* [Javascript Object Notation](https://en.wikipedia.org/wiki/JSON) is a languague-indpendent data format
+* Currently the most common data data format for asynchronous client/server communication format
+* Consists of key-value pairs
+
+<!-- http://i.vimeocdn.com/video/541935816_1280x720.jpg -->
+<!-- Vimeo on What is JSON // https://vimeo.com/144162102 -->
+
+
+```{json example}
+# from https://en.wikipedia.org/wiki/JSON
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 25,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    },
+    {
+      "type": "mobile",
+      "number": "123 456-7890"
+    }
+  ],
+  "children": [],
+  "spouse": null
+}
+```
+
+
+## Example
+
+### OMDB api 
+like http://imdb.com/
+
+## R Packages -- Related
+
+*People who use JSONlite also use...*
+
+* httr -- calls JSONlite in service to major goal of managing HTTP 
+* rvest --  used for html parsing
+
+
+
