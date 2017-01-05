@@ -1,5 +1,5 @@
 ---
-title: "Using R to orchestrate APIs"
+title: "Using R to Orchestrate APIs"
 author: "John Little"
 date: '`r Sys.Date()`'
 output:
@@ -20,16 +20,20 @@ A presentation for [Research Data at the Edge](http://library.duke.edu/edge/even
 <!-- after the research handshake is complete /// http://giphy.com/gifs/80s-1980s-thomas-dolby-wCKmBd7oNtA4g  --> 
 <!-- the confusion of the m2m handshake ///   http://giphy.com/gifs/thomas-MjkCYjM46NrrO -->
 * The Web has lots of stuff
-    + frontier beyond currated datasets
+    + frontier beyond curated datasets
     + stuff is wrapped in HTML
     + The HTML is transported over HTTP but composed for h2m consumption
     + Intellectual Property Rights bear serious consideration
 
 ## API
-Aplication Program Interface 
+Application Program Interface 
 
 * Built for machine-to-machine interactions
 * Instructions for programs
+
+<!-- http://mobile-gps.net/2015/01/ -->
+![](http://mobile-gps.net/gps-systems-without-api/)
+
 
 ---    
 
@@ -64,7 +68,7 @@ Aplication Program Interface
     
 ## JSON
 
-* [Javascript Object Notation](https://en.wikipedia.org/wiki/JSON) is a languague-indpendent data format
+* [Javascript Object Notation](https://en.wikipedia.org/wiki/JSON) is a language-independent data format
 * Currently the most common data data format for asynchronous client/server communication format
 * Consists of key-value pairs
 
