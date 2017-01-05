@@ -6,7 +6,6 @@ output:
   slidy_presentation: default
   html_notebook: default
 ---
-
 A presentation for [Research Data at the Edge](http://library.duke.edu/edge/events/rc17), Day One of [Duke Research Computing Symposium](https://rc.duke.edu/symposium-2017/)
 
 ## Outline
@@ -15,41 +14,53 @@ A presentation for [Research Data at the Edge](http://library.duke.edu/edge/even
 * JSON
 * R / RStudio
 
-But Why?
-Because...  The Web!
+## Why?
 <!-- NASA animated GIF ///  http://i.giphy.com/l2Jht4lIfEQfJ3zj2.gif    --> 
 <!--  good human handshake ///  http://giphy.com/gifs/thomas-U2XboRuN89Idi -->
 <!-- after the research handshake is complete /// http://giphy.com/gifs/80s-1980s-thomas-dolby-wCKmBd7oNtA4g  --> 
-
-
 <!-- the confusion of the m2m handshake ///   http://giphy.com/gifs/thomas-MjkCYjM46NrrO -->
-
 * The Web has lots of stuff
-    + A frontier beyond the carefully constructed dataset
-    + The stuff is wrapped in HTML
+    + frontier beyond currated datasets
+    + stuff is wrapped in HTML
     + The HTML is transported over HTTP but composed for h2m consumption
     + Intellectual Property Rights bear serious consideration
 
 ## API
-
 Aplication Program Interface 
 
 * Built for machine-to-machine interactions
 * Instructions for programs
-* Client / Server <!-- https://pixabay.com/en/client-server-networking-laptop-341420/ --> <!-- https://commons.wikimedia.org/wiki/File:Client-server-model.svg -->
-    + Instructions are the arrows  
 
+---    
 
-&nbsp; <!-- break in the unordered list -->
+### Client / Server 
+<!-- https://pixabay.com/en/client-server-networking-laptop-341420/ -->
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Client-server-model.svg/500px-Client-server-model.svg.png) 
 
 * Make [R] interface with the web, same as h2m but now m2m
+
+---  
+
+### Human Simulation
 * Human version
     + Person uses Web Client
-    + Person enters a URL <!-- https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_(URL)_example.PNG -->
-    + client & server negotiate
+    + Person enters a URL<br>
+    ![](https://upload.wikimedia.org/wikipedia/commons/d/d6/Uniform_Resource_Locator_%28URL%29_example.PNG)
+    <!-- https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_(URL)_example.PNG -->
+    + client & server negotiate<br> 
+    ![dramatization: good handshake](http://i.giphy.com/U2XboRuN89Idi.gif) 
     + Information is sent back in wrapped HTML
-    + Web Browser parses the HTML <!-- https://commons.wikimedia.org/wiki/File:HTML.svg -->
+    + Web Browser parses the HTML 
+    <!-- https://commons.wikimedia.org/wiki/File:HTML.svg -->
 
+
+
+
+## m2m -- development
+
+
+![dramatization: confused about the protocol](http://i.giphy.com/MjkCYjM46NrrO.gif)
     
 ## JSON
 
