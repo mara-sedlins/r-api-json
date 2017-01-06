@@ -1,0 +1,147 @@
+---
+title: "JSONlite packages, searching the API at OMDB.com"
+output:
+  html_notebook: default
+---
+
+```{r load-library-package}
+#library(rvest)  
+library(jsonlite)
+# https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html
+
+# for building tibbles
+library(tidyverse)
+```
+
+## JSONlite
+
+### Single JSON array
+When the server response is a single JSON array, JSONlite makes viewing the data pretty simple.  (This list response is equivalent to `httr::content(url, "parse")`
+```{r singleJSONresult}
+oneJSONresult <- fromJSON("http://www.omdbapi.com/?t=rocky&y=&plot=full&r=json")
+oneJSONresult
+```
+
+It's also easy to gather a single element fromthe response
+```{r}
+oneJSONresult$Title
+```
+
+
+### A JSON Matrix
+The **results of this code-snippet reacts differently** between the *console*, the *Notebook script* (console), and the *Notebook HTML* output.  In the Notebook script-output you can find the component name, in this case dollar-search: `$Search`.  Or, you can use bracket notation: `[[1]]`.  Once you identify the component name, it's easier to identify the element names.
+```{r}
+jsonSeriesResutlsMatrix <- fromJSON("http://www.omdbapi.com/?s=rocky&type=series&r=json&page=1")
+jsonSeriesResutlsMatrix
+```
+
+### Call the search results and coerce the JSON array into a data frame.
+```{r}
+jsonSeriesResutlsMatrix$Search
+```
+
+
+## Nothing below this header needs to be included in a demo about JSONlite.
+
+### Handling all the elements in the components.  
+i.e. gather the series IDs from the  JSON matrix.  
+```{r series-id}
+jsonSeriesResutlsMatrix[[1]]$imdbID
+jsonSeriesResutlsMatrix$Search$imdbID
+
+```
+
+## Gather information on each title in the series result-set
+Use imdbID to search the API
+```{r}
+baseURL <- ("http://www.omdbapi.com/?plot=short&r=json&")
+queryArraybyIMDBid <- paste0(baseURL, "i=", jsonSeriesResutlsMatrix$Search$imdbID)
+
+```
+
+
+```{r}
+queryArraybyIMDBid
+```
+
+
+
+
+## Individual Movie Title Results
+Query result from the 2nd component of the array result
+```{r}
+fromJSON(queryArraybyIMDBid[[1]])
+```
+
+
+```{r}
+# clear vector
+rm(title, yr, release, imdbID, rating, votes)
+
+title <- fromJSON(queryArraybyIMDBid[[1]])$Title
+type <- fromJSON(queryArraybyIMDBid[[1]])$Type
+yr <- fromJSON(queryArraybyIMDBid[[1]])$Year
+release <- fromJSON(queryArraybyIMDBid[[1]])$Released
+imdbID <- fromJSON(queryArraybyIMDBid[[1]])$imdbID
+rating <- fromJSON(queryArraybyIMDBid[[1]])$imdbRating
+votes <- fromJSON(queryArraybyIMDBid[[1]])$imdbVotes
+
+for (i in 2:length(queryArraybyIMDBid)) {  
+  title <- append(title, fromJSON(queryArraybyIMDBid[[i]])$Title)
+  type <- append(type, fromJSON(queryArraybyIMDBid[[i]])$Type)
+  yr <- append(yr, fromJSON(queryArraybyIMDBid[[i]])$Year)
+  release <- append(release, fromJSON(queryArraybyIMDBid[[i]])$Released)
+  imdbID <- append(imdbID, fromJSON(queryArraybyIMDBid[[i]])$imdbID)
+  rating <- append(rating, fromJSON(queryArraybyIMDBid[[i]])$imdbRating)
+  votes <- append(votes, fromJSON(queryArraybyIMDBid[[i]])$imdbVotes)
+}
+
+omdb_df <-  data_frame(
+  title = title[1:10], 
+  type = type[1:10],
+  year = yr[1:10], 
+  release = release[1:10], 
+  imdbID=imdbID[1:10], 
+  rating = as.numeric(rating[1:10]), 
+  votes = as.numeric(votes[1:10])
+)
+
+omdb_df
+
+# try add_row()
+```
+
+```{r}
+
+
+omdb_df2 <-  data_frame(
+title = fromJSON(queryArraybyIMDBid[[1]])$Title,
+type = fromJSON(queryArraybyIMDBid[[1]])$Type,
+yr = fromJSON(queryArraybyIMDBid[[1]])$Year,
+release = fromJSON(queryArraybyIMDBid[[1]])$Released,
+imdbID = fromJSON(queryArraybyIMDBid[[1]])$imdbID,
+rating = fromJSON(queryArraybyIMDBid[[1]])$imdbRating,
+votes = fromJSON(queryArraybyIMDBid[[1]])$imdbVotes
+)
+
+omdb_df2
+
+
+
+for (i in 2:length(queryArraybyIMDBid)) {
+  omdb_df2 <- omdb_df2 %>% 
+    add_row(title = fromJSON(queryArraybyIMDBid[[i]])$Title, 
+            type = fromJSON(queryArraybyIMDBid[[i]])$Type, 
+            yr = fromJSON(queryArraybyIMDBid[[i]])$Year, 
+            release = fromJSON(queryArraybyIMDBid[[i]])$Released,
+            imdbID = fromJSON(queryArraybyIMDBid[[i]])$imdbID, 
+            rating = fromJSON(queryArraybyIMDBid[[i]])$imdbRating, 
+            votes = fromJSON(queryArraybyIMDBid[[i]])$imdbVotes)
+}
+
+omdb_df2
+#rm(omdb_df2)
+
+```
+
+

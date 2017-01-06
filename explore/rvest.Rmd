@@ -1,0 +1,17 @@
+---
+title: "Rvest Notebook"
+output: html_notebook
+---
+
+
+```{r load packages, message=FALSE}
+library(rvest)
+```
+
+## Resources
+* [RStudio Blog: rvest, easy web scraping](https://blog.rstudio.org/2014/11/24/rvest-easy-web-scraping-with-r/)  
+* [Scrape Website data with rvest](http://zevross.com/blog/2015/05/19/scrape-website-data-with-the-new-r-package-rvest/)  
+* [rvest on CRAN](https://cran.r-project.org/web/packages/rvest/index.html)  
+* [rvest on github](https://github.com/hadley/rvest)  
+  * [check out the demos](https://github.com/hadley/rvest/tree/master/demo)  
+* [Law & Rosenblum expand on github demos](http://stat4701.github.io/edav/2015/04/02/rvest_tutorial/)
