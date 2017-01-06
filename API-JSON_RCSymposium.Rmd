@@ -3,8 +3,8 @@ title: "Using R to Orchestrate APIs"
 author: "John Little"
 date: '`r Sys.Date()`'
 output:
-  html_notebook: default
   slidy_presentation: default
+  html_notebook: default
 ---
 ## Using R to Orchestrate APIs
 
@@ -12,11 +12,12 @@ A presentation for [Research Data at the Edge](http://library.duke.edu/edge/even
 
 Hosted by the [Data & Visualization Services](http://library.duke.edu/data/) Department.  
 
-Presentation materials composed in *Rmarkdown* using *Rstudio*, stored in a *Github Repository*, Served via *Github Pages*.  
+### The Files
+- github Repo -- https://github.com/libjohn/r-api-json 
+- Slides -- https://libjohn.github.com/rcs2017/slides.html
+- Notebook -- http://libjohn.github.io/rcs2017/notebook.html 
 
-* github Repo -- https://github.com/libjohn/r-api-json 
-* Slides -- https://libjohn.github.com/rcs2017/slides.html
-* Notebook -- http://libjohn.github.io/rcs2017/notebook.html 
+The presentation materials were composed in *Rmarkdown* via *Rstudio*, stored in a *Github Repository*, Slides & Notebook served via *Github Pages*.  
 
 
 
@@ -135,8 +136,11 @@ Presentation materials composed in *Rmarkdown* using *Rstudio*, stored in a *Git
 2. Project > New Project
 3. Version Contrl > Git 
 4. Repository URL = https://github.com/libjohn/r-api-json.git > Create Project 
-5. GoTo Line 150-ish ("### Demonstration") of the *API-JSON-SYMPOSIUM.Rmd* file
+5. Open *API-JSON-Symposium.Rmd* file
+    + Run All
+    + GoTo Line 150-ish ("### Demonstration") 
 
+--- 
 
 ### OMDB api 
 
@@ -222,8 +226,8 @@ jsonSeriesResutlsMatrix$Search$Title
 
 *People who use JSONlite also use...*
 
-* [httr](https://cran.r-project.org/web/packages/httr/) -- calls JSONlite in service to major goal of managing HTTP 
-* [rvest](https://blog.rstudio.org/2014/11/24/rvest-easy-web-scraping-with-r/) --  used for html parsing
+* [httR](https://cran.r-project.org/web/packages/httr/) -- calls JSONlite in service to major goal of orchestrating HTTP (web scraping)
+* [rvest](https://blog.rstudio.org/2014/11/24/rvest-easy-web-scraping-with-r/) --  used for HTML parsing
 
 ## Resources 
 
