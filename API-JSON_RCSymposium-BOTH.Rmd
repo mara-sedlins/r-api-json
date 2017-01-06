@@ -8,6 +8,10 @@ output:
 ---
 A presentation for [Research Data at the Edge](http://library.duke.edu/edge/events/rc17), Day One of [Duke Research Computing Symposium](https://rc.duke.edu/symposium-2017/)
 
+* Repo
+* Slides
+* Notebook
+
 ## Outline
 
 * API
@@ -15,15 +19,18 @@ A presentation for [Research Data at the Edge](http://library.duke.edu/edge/even
 * R / RStudio
 
 ## Why?
+
+* The Web has lots of stuff
+    + frontier beyond curated datasets
+    + stuff is wrapped in HTML
+    + HTML is transported over HTTP but composed for h2m consumption
+    + Intellectual Property rights bear serious consideration
+
 <!-- NASA animated GIF ///  http://i.giphy.com/l2Jht4lIfEQfJ3zj2.gif    --> 
 <!--  good human handshake ///  http://giphy.com/gifs/thomas-U2XboRuN89Idi -->
 <!-- after the research handshake is complete /// http://giphy.com/gifs/80s-1980s-thomas-dolby-wCKmBd7oNtA4g  --> 
 <!-- the confusion of the m2m handshake ///   http://giphy.com/gifs/thomas-MjkCYjM46NrrO -->
-* The Web has lots of stuff
-    + frontier beyond curated datasets
-    + stuff is wrapped in HTML
-    + The HTML is transported over HTTP but composed for h2m consumption
-    + Intellectual Property Rights bear serious consideration
+
 
 ## API
 Application Program Interface 
@@ -38,28 +45,32 @@ Application Program Interface
 ---    
 
 ### Client / Server 
-<!-- https://pixabay.com/en/client-server-networking-laptop-341420/ -->
+
 
 ![](images/Client-server-model.svg.png) 
 
-* Make [R] interface with the web, same as h2m but now m2m
+* Make [R] interface with the web
+* Same as h2m but now m2m
 
+
+<!-- https://pixabay.com/en/client-server-networking-laptop-341420/ -->
 ---  
 
 ### Human Simulation
-* Human version
-    + Person uses Web Client
+
+A dramatization...
+
+* Person uses Web Client
     + Person enters a URL<br>
     ![](images/URL.PNG)
-    <!-- https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_(URL)_example.PNG -->
+    
     + client & server negotiate<br> 
     ![dramatization: good handshake](images/good-handshake.gif) 
     + Information is sent back in wrapped HTML
     + Web Browser parses the HTML 
-    <!-- https://commons.wikimedia.org/wiki/File:HTML.svg -->
-
-
-
+    
+<!-- https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_(URL)_example.PNG -->
+<!-- https://commons.wikimedia.org/wiki/File:HTML.svg -->
 
 ## m2m -- development
 
