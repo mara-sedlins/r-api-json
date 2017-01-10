@@ -35,8 +35,11 @@ length(book10$characters)  # Number of characters in book 10
 library(tidyverse)  # because I like working with modern data frames and tidy data
 
 allBooks <- fromJSON("http://anapioficeandfire.com/api/books")
-publishers <- table(allBooks$publisher)                           # tally up each publisher's catalog
-tbl_df(publishers)                                                # Display as a modern dataframe
+
+allBooks %>% 
+  tbl_df() %>%                                            # convert to tibble
+  group_by(publisher) %>%
+  summarise(TitlesPublished = length(publisher))
 ```
 
 ---
@@ -49,7 +52,7 @@ paste(allBooks$name, allBooks$publisher,sep = " --- ")            # List each bo
 
 ---
 
-4. What is the total number of pages of all books?
+4. What is the total number of pages of all books in the series?
 ```{r bonus3}
 sum(allBooks$numberOfPages)                                       # Total number of pages of all books
 ```
