@@ -1,0 +1,95 @@
+---
+title: "Using R to Orchestrate APIs -- Demonstration"
+author: "John Little"
+date: '`r Sys.Date()`'
+output:
+  html_notebook: default
+---
+
+## Demonstration
+
+### To Follow Along
+1. Open an RStudio Docker Container - https://vm-manage.oit.duke.edu/containers/rstudio 
+2. Project > New Project
+3. Version Contrl > Git 
+4. Repository URL = https://github.com/libjohn/r-api-json.git > Create Project 
+5. Open *API-JSON-Symposium.Rmd* file
+    + Run All
+
+--- 
+
+### OMDB api 
+
+- http://www.omdb.org/
+    - like http://imdb.com/
+- no API keys requried
+- http://www.omdbapi.com/
+
+--- 
+
+### Demonstration
+
+```{r load-library-package}
+# https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html
+library(jsonlite)
+```
+
+
+### Single JSON array
+When the server response is a single JSON array, JSONlite makes viewing the data pretty simple.
+```{r singleJSONresult}
+oneJSONresult <- fromJSON("http://www.omdbapi.com/?t=rocky&y=&plot=full&r=json")
+```
+
+---
+
+```{r}
+oneJSONresult
+```
+
+
+--- 
+
+##### The vector object behaves as you would expect in R.  
+
+- You can list all the variable names.
+
+```{r}
+names(oneJSONresult)
+```
+
+- List an individual element
+
+```{r}
+oneJSONresult$Title
+```
+
+```{r}
+oneJSONresult$Awards
+```
+
+
+---
+
+### A JSON List
+The **results of this code-snippet react differently** between the *console*, the *Notebook script* (console), and the *Notebook HTML* output.  In the script-output you can find the object names of the list, in this case dollar-search: `$Search`.  Or, you can use bracket notation: `[[1]]`.  Once you identify the object name, it's easier to identify the vector names within the `$Search` data frame.
+```{r}
+jsonSeriesResutlsList <- fromJSON("http://www.omdbapi.com/?s=rocky&type=series&r=json&page=1")
+jsonSeriesResutlsList
+
+```
+
+---  
+
+#### Search results of the JSON list as a data frame.
+```{r}
+jsonSeriesResutlsList$Search
+```
+
+--- 
+
+#### Title Vector of the Search Data Frame 
+```{r}
+jsonSeriesResutlsList$Search$Title
+```
+
