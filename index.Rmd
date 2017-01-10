@@ -16,4 +16,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1. [Demonstration](http://libjohn.github.io/rcs2017/demonstration.nb.html)
 
-1. [Hands-on](http://libjohn.github.io/rcs2017/handson.html)
+1. [Hands-on](http://libjohn.github.io/rcs2017/handson.nb.html)
