@@ -10,7 +10,7 @@ output:
 
 ### To Follow Along
 
-- Open the Web Page - [Demonstration](http://libjohn.github.io/rcs2017/demonstration.nb.html)
+- Open the Web Page - http://libjohn.github.io/rcs2017/demonstration.nb.html
 
 **OR**
 
@@ -28,7 +28,7 @@ output:
 - http://www.omdb.org/
     - like http://imdb.com/
     - no API keys requried
-    - **http://www.omdbapi.com/**
+    - **The API** http://www.omdbapi.com/
 
 --- 
 

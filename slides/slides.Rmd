@@ -41,7 +41,7 @@ class: bottom
 
 - Slides -- https://libjohn.github.com/rcs2017/slides.nb.html
 
-- Notebook -- http://libjohn.github.io/rcs2017/notebook.nb.html 
+- Demonstration -- http://libjohn.github.io/rcs2017/demonstration.nb.html 
 
 - Hands-on -- http://libjohn.github.io/rcs2017/handson.nb.html
 
