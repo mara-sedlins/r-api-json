@@ -13,8 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## R Markdown
 
 
-1. [Slides](http://libjohn.github.io/rcs2017/slides.html)
+1. [Slides](http://libjohn.github.io/rcs2017/slides/slides.html)
 
-1. [Demonstration](http://libjohn.github.io/rcs2017/demonstration.html)
+1. [Demonstration](http://libjohn.github.io/rcs2017/demonstration.nb.html)
 
 1. [Hands-on](http://libjohn.github.io/rcs2017/handson.html)
