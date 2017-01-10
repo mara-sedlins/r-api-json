@@ -102,4 +102,4 @@ jsonSeriesResutlsList$Search$Title
 
 ## Next
 
-- [Handson.Rmd](http:libjohn.github.io/rcs2017/handson.html)
+- [Handson.Rmd](http://libjohn.github.io/rcs2017/handson.nb.html)

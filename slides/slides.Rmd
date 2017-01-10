@@ -39,11 +39,13 @@ class: bottom
 
 - Github Repo -- https://github.com/libjohn/r-api-json 
 
-- Slides -- https://libjohn.github.com/rcs2017/slides.html
+- Slides -- https://libjohn.github.com/rcs2017/slides.nb.html
 
-- Notebook -- http://libjohn.github.io/rcs2017/notebook.html 
+- Notebook -- http://libjohn.github.io/rcs2017/notebook.nb.html 
 
-### Eating Our Dogfood
+- Hands-on -- http://libjohn.github.io/rcs2017/handson.nb.html
+
+### Eat Your Our Dogfood
 
 This presentation consists of an R Notebook and slides composed in *Rmarkdown* via *Rstudio*, slides made with `devtools::install_github("yihui/xaringan")`, files stored in a *Github Repository*, Slides & Notebook served via *Github Pages*.  
 
