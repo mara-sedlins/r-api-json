@@ -1,6 +1,6 @@
 ---
-title: "R-and-APIs for Research Computing Symposium 2017"
-subtitle: "http://libjohn.github.io/rcs2017/"
+title: "Using R to Orchestrate APIs"
+subtitle: "for Research Computing Symposium 2017<br>http://libjohn.github.io/rcs2017/"
 author: "John Little"
 date: "`r Sys.Date()`"
 output: html_document
