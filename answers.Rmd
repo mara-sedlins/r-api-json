@@ -1,0 +1,55 @@
+---
+title: "Using R to Orchestrate APIs -- Answers"
+subtitle: "using An API Of Ice And Fire"
+author: "John Little"
+date: '`r Sys.Date()`'
+output:
+  html_notebook: default
+---
+
+```{r load-libraries}
+library(jsonlite)
+```
+
+
+1. What is the title of book10?
+2. How many pages in book10?
+3. How many characters in book 10?
+
+```{r book10}
+book10 <- fromJSON("http://anapioficeandfire.com/api/books/10")
+
+book10$name    # title
+
+book10$numberOfPages  # pages in book 10
+
+length(book10$characters)  # Number of characters in book 10
+```
+
+## Bonus Round
+
+1. How many different publishers are there?
+2. How many books did each publisher publish?
+
+```{r bonus1}
+library(tidyverse)  # because I like working with modern data frames and tidy data
+
+allBooks <- fromJSON("http://anapioficeandfire.com/api/books")
+publishers <- table(allBooks$publisher)                           # tally up each publisher's catalog
+tbl_df(publishers)                                                # Display as a modern dataframe
+```
+
+---
+
+3. List each book with its publisher?
+
+```{r bonus2}
+paste(allBooks$name, allBooks$publisher,sep = " --- ")            # List each book with its publisher
+```
+
+---
+
+4. What is the total number of pages of all books?
+```{r bonus3}
+sum(allBooks$numberOfPages)                                       # Total number of pages of all books
+```

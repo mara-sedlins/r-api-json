@@ -9,21 +9,26 @@ output:
 ## Demonstration
 
 ### To Follow Along
-1. Open an RStudio Docker Container - https://vm-manage.oit.duke.edu/containers/rstudio 
+
+- Open the Web Page - [Demonstration](http://libjohn.github.io/rcs2017/demonstration.nb.html)
+
+**OR**
+
+1. Open the Notebook in an RStudio Docker Container - https://vm-manage.oit.duke.edu/containers/rstudio 
 2. Project > New Project
 3. Version Contrl > Git 
 4. Repository URL = https://github.com/libjohn/r-api-json.git > Create Project 
-5. Open *API-JSON-Symposium.Rmd* file
+5. Open *demonstration.Rmd* file
     + Run All
 
 --- 
 
-### OMDB api 
+### Overview of OMDB api 
 
 - http://www.omdb.org/
     - like http://imdb.com/
-- no API keys requried
-- http://www.omdbapi.com/
+    - no API keys requried
+    - **http://www.omdbapi.com/**
 
 --- 
 
@@ -93,3 +98,8 @@ jsonSeriesResutlsList$Search
 jsonSeriesResutlsList$Search$Title
 ```
 
+---
+
+## Next
+
+- [Handson.Rmd](http:libjohn.github.io/rcs2017/handson.html)

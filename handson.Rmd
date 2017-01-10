@@ -1,0 +1,55 @@
+---
+title: "Using R to Orchestrate APIs -- Hands-on"
+subtitle: "using An API Of Ice And Fire"
+author: "John Little"
+date: '`r Sys.Date()`'
+output:
+  html_notebook: default
+---
+
+```{r load-libraries}
+library(jsonlite)
+```
+
+
+### Introduction to R Markdown Notebooks
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+---
+
+## Hands-on
+
+- Familiarize yourself with the API Of Ice And Fire -- http://anapioficeandfire.com/
+    - The first page has practice queries
+    - There is a documentation section at the iceandfire site
+    - Answers to the questions below can be found in the **answers.Rmd** file or at http://libjohn.github.io/rcs2017/answers.nb.html
+
+1. What is the title of book10?
+2. How many pages in book10?
+3. How many characters in book 10?
+
+```{r book10}
+
+```
+
+## Bonus Round
+
+1. How many different publishers are there?
+2. How many books did each publisher publish?
+3. List each book with it's publisher
+
+    
+```{r publishers}
+
+```
