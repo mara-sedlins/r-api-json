@@ -179,21 +179,18 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeShqc29ubGl0ZSlcbmBgYFxuYGBgIn0= -->
-<p><code>r</code>r library(jsonlite)</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShqc29ubGl0ZSlcbmBgYCJ9 -->
+<pre class="r"><code>library(jsonlite)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div id="introduction-to-r-markdown-notebooks" class="section level3">
 <h3>Introduction to R Markdown Notebooks</h3>
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
+<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.   Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucGxvdChjYXJzKVxuYGBgXG5gYGAifQ== -->
-<p><code>r</code>r plot(cars)</p>
-<pre><code></code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
+<pre class="r"><code>plot(cars)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -201,8 +198,18 @@ $(document).ready(function () {
 <p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
 <hr />
 </div>
-<div id="hands-on" class="section level2">
-<h2>Hands-on</h2>
+<div id="hands-on-part-i" class="section level2">
+<h2>Hands-on Part I</h2>
+<ul>
+<li>Using the <a href="http://www.omdbapi.com/">OMDb API</a>
+<ul>
+<li>Practice geting and parsing information about your favorite movie</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="hands-on-part-ii" class="section level2">
+<h2>Hands-on Part II</h2>
 <ul>
 <li>Familiarize yourself with the API Of Ice And Fire – <a href="http://anapioficeandfire.com/" class="uri">http://anapioficeandfire.com/</a>
 <ul>
@@ -219,6 +226,13 @@ $(document).ready(function () {
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYm9vazEwIDwtIGZyb21KU09OKFwiaHR0cDovL2FuYXBpb2ZpY2VhbmRmaXJlLmNvbS9hcGkvYm9va3MvMTBcIilcblxuYm9vazEwXG5cbmxlbmd0aChib29rMTAkY2hhcmFjdGVycylcbmBgYCJ9 -->
+<pre class="r"><code>book10 &lt;- fromJSON(&quot;http://anapioficeandfire.com/api/books/10&quot;)
+
+book10
+
+length(book10$characters)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -231,10 +245,22 @@ $(document).ready(function () {
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5hbGxib29rcyA8LSBmcm9tSlNPTihcImh0dHA6Ly9hbmFwaW9maWNlYW5kZmlyZS5jb20vYXBpL2Jvb2tzL1wiKVxuXG5saWJyYXJ5KHRpZHl2ZXJzZSlcbnRibF9kZihhbGxib29rcykgJT4lIFxuICBncm91cF9ieShwdWJsaXNoZXIpICU+JSBcbiAgc3VtbWFyaXNlKG5vID0gbGVuZ3RoKHB1Ymxpc2hlcikpXG5cbnBhc3RlKGFsbGJvb2tzJG5hbWUsIGFsbGJvb2tzJHB1Ymxpc2hlciwgc2VwID0gXCItLS0tXCIpXG5cbmBgYCJ9 -->
+<pre class="r"><code>
+allbooks &lt;- fromJSON(&quot;http://anapioficeandfire.com/api/books/&quot;)
+
+library(tidyverse)
+tbl_df(allbooks) %&gt;% 
+  group_by(publisher) %&gt;% 
+  summarise(no = length(publisher))
+
+paste(allbooks$name, allbooks$publisher, sep = &quot;----&quot;)
+</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlVzaW5nIFIgdG8gT3JjaGVzdHJhdGUgQVBJcyAtLSBIYW5kcy1vbiINCnN1YnRpdGxlOiAidXNpbmcgQW4gQVBJIE9mIEljZSBBbmQgRmlyZSINCmF1dGhvcjogIkpvaG4gTGl0dGxlIg0KZGF0ZTogJ2ByIFN5cy5EYXRlKClgJw0Kb3V0cHV0Og0KICBodG1sX25vdGVib29rOiBkZWZhdWx0DQotLS0NCg0KYGBge3IgbG9hZC1saWJyYXJpZXN9DQpsaWJyYXJ5KGpzb25saXRlKQ0KYGBgDQoNCg0KIyMjIEludHJvZHVjdGlvbiB0byBSIE1hcmtkb3duIE5vdGVib29rcw0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KLS0tDQoNCiMjIEhhbmRzLW9uDQoNCi0gRmFtaWxpYXJpemUgeW91cnNlbGYgd2l0aCB0aGUgQVBJIE9mIEljZSBBbmQgRmlyZSAtLSBodHRwOi8vYW5hcGlvZmljZWFuZGZpcmUuY29tLw0KICAgIC0gVGhlIGZpcnN0IHBhZ2UgaGFzIHByYWN0aWNlIHF1ZXJpZXMNCiAgICAtIFRoZXJlIGlzIGEgZG9jdW1lbnRhdGlvbiBzZWN0aW9uIGF0IHRoZSBpY2VhbmRmaXJlIHNpdGUNCiAgICAtIEFuc3dlcnMgdG8gdGhlIHF1ZXN0aW9ucyBiZWxvdyBjYW4gYmUgZm91bmQgaW4gdGhlICoqYW5zd2Vycy5SbWQqKiBmaWxlIG9yIGF0IGh0dHA6Ly9saWJqb2huLmdpdGh1Yi5pby9yY3MyMDE3L2Fuc3dlcnMubmIuaHRtbA0KLSBbQW5zd2Vyc10oaHR0cDovL2xpYmpvaG4uZ2l0aHViLmlvL3JjczIwMTcvYW5zd2Vycy5uYi5odG1sKQ0KDQoxLiBXaGF0IGlzIHRoZSB0aXRsZSBvZiBib29rMTA/DQoyLiBIb3cgbWFueSBwYWdlcyBpbiBib29rMTA/DQozLiBIb3cgbWFueSBjaGFyYWN0ZXJzIGluIGJvb2sgMTA/DQoNCmBgYHtyIGJvb2sxMH0NCg0KYGBgDQoNCiMjIEJvbnVzIFJvdW5kDQoNCjEuIEhvdyBtYW55IGRpZmZlcmVudCBwdWJsaXNoZXJzIGFyZSB0aGVyZT8NCjIuIEhvdyBtYW55IGJvb2tzIGRpZCBlYWNoIHB1Ymxpc2hlciBwdWJsaXNoPw0KMy4gTGlzdCBlYWNoIGJvb2sgd2l0aCBpdCdzIHB1Ymxpc2hlcg0KDQogICAgDQpgYGB7ciBwdWJsaXNoZXJzfQ0KDQpgYGANCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlVzaW5nIFIgdG8gT3JjaGVzdHJhdGUgQVBJcyAtLSBIYW5kcy1vbiINCnN1YnRpdGxlOiAidXNpbmcgQW4gQVBJIE9mIEljZSBBbmQgRmlyZSINCmF1dGhvcjogIkpvaG4gTGl0dGxlIg0KZGF0ZTogJ2ByIFN5cy5EYXRlKClgJw0Kb3V0cHV0Og0KICBodG1sX25vdGVib29rOiBkZWZhdWx0DQotLS0NCg0KYGBge3IgbG9hZC1saWJyYXJpZXN9DQpsaWJyYXJ5KGpzb25saXRlKQ0KYGBgDQoNCg0KIyMjIEludHJvZHVjdGlvbiB0byBSIE1hcmtkb3duIE5vdGVib29rcw0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCiZuYnNwOyANClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDdHJsK1NoaWZ0K0VudGVyKi4gDQoNCmBgYHtyfQ0KcGxvdChjYXJzKQ0KYGBgDQoNCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDdHJsK0FsdCtJKi4NCg0KV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDdHJsK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuDQoNCi0tLQ0KDQojIyBIYW5kcy1vbiBQYXJ0IEkNCg0KLSBVc2luZyB0aGUgW09NRGIgQVBJXShodHRwOi8vd3d3Lm9tZGJhcGkuY29tLykNCiAgICAtIFByYWN0aWNlIGdldGluZyBhbmQgcGFyc2luZyBpbmZvcm1hdGlvbiBhYm91dCB5b3VyIGZhdm9yaXRlIG1vdmllDQoNCi0tLQ0KDQojIyBIYW5kcy1vbiBQYXJ0IElJDQoNCi0gRmFtaWxpYXJpemUgeW91cnNlbGYgd2l0aCB0aGUgQVBJIE9mIEljZSBBbmQgRmlyZSAtLSBodHRwOi8vYW5hcGlvZmljZWFuZGZpcmUuY29tLw0KICAgIC0gVGhlIGZpcnN0IHBhZ2UgaGFzIHByYWN0aWNlIHF1ZXJpZXMNCiAgICAtIFRoZXJlIGlzIGEgZG9jdW1lbnRhdGlvbiBzZWN0aW9uIGF0IHRoZSBpY2VhbmRmaXJlIHNpdGUNCiAgICAtIEFuc3dlcnMgdG8gdGhlIHF1ZXN0aW9ucyBiZWxvdyBjYW4gYmUgZm91bmQgaW4gdGhlICoqYW5zd2Vycy5SbWQqKiBmaWxlIG9yIGF0IGh0dHA6Ly9saWJqb2huLmdpdGh1Yi5pby9yY3MyMDE3L2Fuc3dlcnMubmIuaHRtbA0KLSBbQW5zd2Vyc10oaHR0cDovL2xpYmpvaG4uZ2l0aHViLmlvL3JjczIwMTcvYW5zd2Vycy5uYi5odG1sKQ0KDQoxLiBXaGF0IGlzIHRoZSB0aXRsZSBvZiBib29rMTA/DQoyLiBIb3cgbWFueSBwYWdlcyBpbiBib29rMTA/DQozLiBIb3cgbWFueSBjaGFyYWN0ZXJzIGluIGJvb2sgMTA/DQoNCmBgYHtyIGJvb2sxMH0NCmJvb2sxMCA8LSBmcm9tSlNPTigiaHR0cDovL2FuYXBpb2ZpY2VhbmRmaXJlLmNvbS9hcGkvYm9va3MvMTAiKQ0KDQpib29rMTANCg0KbGVuZ3RoKGJvb2sxMCRjaGFyYWN0ZXJzKQ0KYGBgDQoNCiMjIEJvbnVzIFJvdW5kDQoNCjEuIEhvdyBtYW55IGRpZmZlcmVudCBwdWJsaXNoZXJzIGFyZSB0aGVyZT8NCjIuIEhvdyBtYW55IGJvb2tzIGRpZCBlYWNoIHB1Ymxpc2hlciBwdWJsaXNoPw0KMy4gTGlzdCBlYWNoIGJvb2sgd2l0aCBpdCdzIHB1Ymxpc2hlcg0KDQogICAgDQpgYGB7ciBwdWJsaXNoZXJzfQ0KDQphbGxib29rcyA8LSBmcm9tSlNPTigiaHR0cDovL2FuYXBpb2ZpY2VhbmRmaXJlLmNvbS9hcGkvYm9va3MvIikNCg0KbGlicmFyeSh0aWR5dmVyc2UpDQp0YmxfZGYoYWxsYm9va3MpICU+JSANCiAgZ3JvdXBfYnkocHVibGlzaGVyKSAlPiUgDQogIHN1bW1hcmlzZShubyA9IGxlbmd0aChwdWJsaXNoZXIpKQ0KDQpwYXN0ZShhbGxib29rcyRuYW1lLCBhbGxib29rcyRwdWJsaXNoZXIsIHNlcCA9ICItLS0tIikNCg0KYGBgDQo=</div>
 
 
 

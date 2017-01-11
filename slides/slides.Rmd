@@ -18,6 +18,8 @@ background-image: url(https://d1avok0lzls2w.cloudfront.net/img_uploads/apis-for-
 options(htmltools.dir.version = FALSE)
 ```
 
+&nbsp;
+
 ---
 class: bottom
 background-image: url(https://d1avok0lzls2w.cloudfront.net/img_uploads/apis-for-marketers.png)
