@@ -15,7 +15,7 @@ output:
 **OR**
 
 1. Open the Notebook in an RStudio Docker Container - https://vm-manage.oit.duke.edu/containers/rstudio 
-2. Project > New Project
+2. File > New Project...
 3. Version Control > Git 
 4. Repository URL = https://github.com/libjohn/r-api-json.git > Create Project 
 5. Open *demonstration.Rmd* file
