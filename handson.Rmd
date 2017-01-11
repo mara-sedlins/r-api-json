@@ -28,7 +28,14 @@ When you save the notebook, an HTML file containing the code and output will be 
 
 ---
 
-## Hands-on
+## Hands-on Part I
+
+- Using the [OMDb API](http://www.omdbapi.com/)
+    - Practice geting and parsing information about your favorite movie
+
+---
+
+## Hands-on Part II
 
 - Familiarize yourself with the API Of Ice And Fire -- http://anapioficeandfire.com/
     - The first page has practice queries
@@ -41,7 +48,11 @@ When you save the notebook, an HTML file containing the code and output will be 
 3. How many characters in book 10?
 
 ```{r book10}
+book10 <- fromJSON("http://anapioficeandfire.com/api/books/10")
 
+book10
+
+length(book10$characters)
 ```
 
 ## Bonus Round
@@ -52,5 +63,14 @@ When you save the notebook, an HTML file containing the code and output will be 
 
     
 ```{r publishers}
+
+allbooks <- fromJSON("http://anapioficeandfire.com/api/books/")
+
+library(tidyverse)
+tbl_df(allbooks) %>% 
+  group_by(publisher) %>% 
+  summarise(no = length(publisher))
+
+paste(allbooks$name, allbooks$publisher, sep = "----")
 
 ```
