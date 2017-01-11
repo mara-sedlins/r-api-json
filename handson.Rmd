@@ -34,6 +34,7 @@ When you save the notebook, an HTML file containing the code and output will be 
     - The first page has practice queries
     - There is a documentation section at the iceandfire site
     - Answers to the questions below can be found in the **answers.Rmd** file or at http://libjohn.github.io/rcs2017/answers.nb.html
+- [Answers](http://libjohn.github.io/rcs2017/answers.nb.html)
 
 1. What is the title of book10?
 2. How many pages in book10?

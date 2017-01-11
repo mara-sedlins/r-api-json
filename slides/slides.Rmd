@@ -26,7 +26,7 @@ background-image: url(https://d1avok0lzls2w.cloudfront.net/img_uploads/apis-for-
 
 A presentation for [Research Data at the /Edge](http://library.duke.edu/edge/events/rc17)  
 Hosted by the [Data & Visualization Services](http://library.duke.edu/data/) Department  
-Day One, [Duke Research Computing Symposium](https://rc.duke.edu/symposium-2017/)
+Day One, [Duke Research Computing Symposium](https://rc.duke.edu/symposium-2017/), 2017
 
 ???
 
@@ -45,7 +45,7 @@ class: bottom
 
 - Hands-on -- http://libjohn.github.io/rcs2017/handson.nb.html
 
-### Eat Your Our Dogfood
+### Eat Your Own Dogfood
 
 This presentation consists of an R Notebook and slides composed in *Rmarkdown* via *Rstudio*, slides made with `devtools::install_github("yihui/xaringan")`, files stored in a *Github Repository*, Slides & Notebook served via *Github Pages*.  
 
@@ -77,11 +77,6 @@ This presentation consists of an R Notebook and slides composed in *Rmarkdown* v
 
 ## Intellectual Property rights bear serious consideration
 
-<!-- NASA animated GIF ///  http://i.giphy.com/l2Jht4lIfEQfJ3zj2.gif    --> 
-<!--  good human handshake ///  http://giphy.com/gifs/thomas-U2XboRuN89Idi -->
-<!-- after the research handshake is complete /// http://giphy.com/gifs/80s-1980s-thomas-dolby-wCKmBd7oNtA4g  --> 
-<!-- the confusion of the m2m handshake ///   http://giphy.com/gifs/thomas-MjkCYjM46NrrO -->
-
 ---
 
 ## API
@@ -93,10 +88,6 @@ This presentation consists of an R Notebook and slides composed in *Rmarkdown* v
 - Instructions for programs
 
 ![API schematic](images/api.png)
-
-<!-- ![API schematic](images/api.png) -->
-<!-- http://mobile-gps.net/2015/01/ -->
-
 
 ---
 
@@ -132,9 +123,6 @@ This presentation consists of an R Notebook and slides composed in *Rmarkdown* v
 
 .right[![happy parsing dance](images/result-happyDance.gif)]
     
-<!-- https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_(URL)_example.PNG -->
-<!-- https://commons.wikimedia.org/wiki/File:HTML.svg -->
-
 ---
 
 - Information is sent back in wrapped HTML
@@ -193,9 +181,6 @@ This presentation consists of an R Notebook and slides composed in *Rmarkdown* v
 }
 ```
 
-<!-- http://i.vimeocdn.com/video/541935816_1280x720.jpg -->
-<!-- Vimeo on What is JSON // https://vimeo.com/144162102 -->
-
 ---
 
 ## m2m -- development
@@ -232,9 +217,8 @@ This presentation consists of an R Notebook and slides composed in *Rmarkdown* v
 
 ## Resources 
 
-- RStudio httR video
-- JSONlite package
-- listof images
+- [Extracting Data from the Web Part 1](https://www.rstudio.com/resources/webinars/extracting-data-from-the-web-part-1/). RStudio Webinar Video
+- [JSONlite package](https://cran.r-project.org/web/packages/jsonlite/index.html)
 - Movies of 1976
     - [OMDB Top Movies](http://www.omdb.org/encyclopedia/year/1976/statistics)
     - [IMDB Most Popular](http://www.imdb.com/year/1976/)
@@ -243,9 +227,29 @@ This presentation consists of an R Notebook and slides composed in *Rmarkdown* v
 
 ---
 
-documentation page
+## Image Credits
 
-foo
+- [API schematic](https://moz.com/blog/apis-for-datadriven-marketers)
+- [Client / Server](https://commons.wikimedia.org/wiki/File:Client-server-model.svg)
+- [Good human handshake](http://giphy.com/gifs/thomas-U2XboRuN89Idi)
+- [happy parsed dance](http://giphy.com/gifs/80s-1980s-thomas-dolby-wCKmBd7oNtA4g)
+- [development](http://giphy.com/gifs/thomas-MjkCYjM46NrrO)
+
+- NASA animated GIF ///  http://i.giphy.com/l2Jht4lIfEQfJ3zj2.gif     
+
+<!-- https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_(URL)_example.PNG -->
+<!-- https://commons.wikimedia.org/wiki/File:HTML.svg -->
+<!-- http://i.vimeocdn.com/video/541935816_1280x720.jpg -->
+<!-- Vimeo on What is JSON // https://vimeo.com/144162102 -->
+
+
+---
+
+## Shareable under CC BY-NC-SA license 
+
+Data, presentation, and handouts are shareable under [CC BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+![This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License")
 
 
 
