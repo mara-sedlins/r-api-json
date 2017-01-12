@@ -48,11 +48,8 @@ When you save the notebook, an HTML file containing the code and output will be 
 3. How many characters in book 10?
 
 ```{r book10}
-book10 <- fromJSON("http://anapioficeandfire.com/api/books/10")
 
-book10
 
-length(book10$characters)
 ```
 
 ## Bonus Round
@@ -64,13 +61,5 @@ length(book10$characters)
     
 ```{r publishers}
 
-allbooks <- fromJSON("http://anapioficeandfire.com/api/books/")
-
-library(tidyverse)
-tbl_df(allbooks) %>% 
-  group_by(publisher) %>% 
-  summarise(no = length(publisher))
-
-paste(allbooks$name, allbooks$publisher, sep = "----")
 
 ```
