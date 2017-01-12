@@ -39,7 +39,7 @@ class: bottom
 
 - Github Repo -- https://github.com/libjohn/r-api-json 
 
-- Web Site -- https://libjohn.github.com/rcs2017/
+- Web Site -- https://libjohn.github.io/rcs2017/
     - [Slides](https://libjohn.github.com/rcs2017/slides.html)
     - [Demonstration](http://libjohn.github.io/rcs2017/demonstration.nb.html)
     - [Hands-on](http://libjohn.github.io/rcs2017/handson.nb.html)
@@ -247,17 +247,12 @@ Ever seen HTML before?
 
 - [API schematic](https://moz.com/blog/apis-for-datadriven-marketers)
 - [Client / Server](https://commons.wikimedia.org/wiki/File:Client-server-model.svg)
+- [URL](https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_%28URL%29_example.PNG)
 - [Good human handshake](http://giphy.com/gifs/thomas-U2XboRuN89Idi)
 - [happy parsed dance](http://giphy.com/gifs/80s-1980s-thomas-dolby-wCKmBd7oNtA4g)
-- [development](http://giphy.com/gifs/thomas-MjkCYjM46NrrO)
 
-- NASA animated GIF ///  http://i.giphy.com/l2Jht4lIfEQfJ3zj2.gif     
 
-<!-- https://commons.wikimedia.org/wiki/File:Uniform_Resource_Locator_(URL)_example.PNG -->
-<!-- https://commons.wikimedia.org/wiki/File:HTML.svg -->
-<!-- http://i.vimeocdn.com/video/541935816_1280x720.jpg -->
-<!-- Vimeo on What is JSON // https://vimeo.com/144162102 -->
-
+- [NASA animated GIF](http://i.giphy.com/l2Jht4lIfEQfJ3zj2.gif)     
 
 ---
 
