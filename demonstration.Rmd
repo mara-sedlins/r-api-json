@@ -40,8 +40,8 @@ library(jsonlite)
 ```
 
 
-### Single JSON array
-When the server response is a single JSON array, JSONlite makes viewing the data pretty simple.
+### Single JSON object
+When the API response is a single JSON object, JSONlite puts the response into a single item list which allows for a simple view the data.
 ```{r singleJSONresult}
 oneJSONresult <- fromJSON("http://www.omdbapi.com/?t=rocky&y=&plot=full&r=json")
 ```
@@ -55,9 +55,9 @@ oneJSONresult
 
 --- 
 
-##### The vector object behaves as you would expect in R.  
+##### The elements of the list behave as you would expect in R.  
 
-- You can list all the variable names.
+- List all the variable names.
 
 ```{r}
 names(oneJSONresult)
@@ -76,8 +76,10 @@ oneJSONresult$Awards
 
 ---
 
-### A JSON List
-The **results of this code-snippet react differently** between the *console*, the *Notebook script* (console), and the *Notebook HTML* output.  In the script-output you can find the object names of the list, in this case dollar-search: `$Search`.  Or, you can use bracket notation: `[[1]]`.  Once you identify the object name, it's easier to identify the vector names within the `$Search` data frame.
+### Multiple objects in API response
+Note:  The **results of this code-snippet react differently** between the *console*, the *Notebook script* (console), and the *Notebook HTML* output.  In the script-output you can find the object names of the list, in this case dollar-search: `$Search`.  Or, you can use bracket notation: `[[1]]`.  Once you identify the object name, it's easier to identify the vector names within the `$Search` data frame.
+
+Below, the structure of the API response for a series search is to have a data.frame with the search results (`$Search`), and two other list components (`$TotalResults`, `$Response`).  We're interested in the results, the `$Search` data.frame.
 ```{r}
 jsonSeriesResutlsList <- fromJSON("http://www.omdbapi.com/?s=rocky&type=series&r=json&page=1")
 jsonSeriesResutlsList
@@ -93,7 +95,7 @@ jsonSeriesResutlsList$Search
 
 --- 
 
-#### Title Vector of the Search Data Frame 
+#### Title vector of the Search Data Frame 
 ```{r}
 jsonSeriesResutlsList$Search$Title
 ```
