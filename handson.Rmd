@@ -49,6 +49,11 @@ When you save the notebook, an HTML file containing the code and output will be 
 
 ```{r book10}
 
+jsonResultIceAndFireDemo <- fromJSON("http://anapioficeandfire.com/api/books/10")
+
+jsonResultIceAndFireDemo$name
+jsonResultIceAndFireDemo$numberOfPages
+length(jsonResultIceAndFireDemo$characters)
 
 ```
 
@@ -61,5 +66,8 @@ When you save the notebook, an HTML file containing the code and output will be 
     
 ```{r publishers}
 
+jsonResultIceAndFireDemo.Books <- fromJSON("http://anapioficeandfire.com/api/books")
+
+jsonResultIceAndFireDemo.Books$publisher
 
 ```

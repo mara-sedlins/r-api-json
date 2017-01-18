@@ -1,6 +1,6 @@
 ---
 title: "Using R to Orchestrate APIs -- Demonstration"
-author: "John Little"
+author: "Mara Sedlins"
 date: '`r Sys.Date()`'
 output:
   html_notebook: default
